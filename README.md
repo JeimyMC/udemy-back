@@ -55,10 +55,11 @@ All the information of the routes is in _docs_ folder
 5.  See the products by id, category, name of the product, user, email.
 
 - **Admin rol:**
-  1. The same of user rol
-  2. Create, update or delete a category
-  3. Create, update or delete a product
-  4. Delete a user with user rol
+
+1. The same of user rol
+2. Create, update or delete a category
+3. Create, update or delete a product
+4. Delete a user with user rol
 
 ## License
 
@@ -67,4 +68,5 @@ Distributed under the MIT License. See LICENSE for more information.
 ## Contact
 
 - [Jeimy Miranda](https://www.linkedin.com/in/jeimy-miranda-caviedes-32a0b31b0/)
+
 # udemy-back
