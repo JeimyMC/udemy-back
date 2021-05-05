@@ -68,5 +68,3 @@ Distributed under the MIT License. See LICENSE for more information.
 ## Contact
 
 - [Jeimy Miranda](https://www.linkedin.com/in/jeimy-miranda-caviedes-32a0b31b0/)
-
-# udemy-back
