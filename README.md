@@ -21,7 +21,7 @@ You will need node and mongoDB compass.
 1. Clone the repo
 
 ```
-git clone https://github.com/
+git clone https://github.com/JeimyMC/udemy-back.git
 ```
 
 2. Install NPM packages
