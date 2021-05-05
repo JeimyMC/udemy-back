@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "b8c32561-bbf4-4565-9040-66c387840b48",
+		"name": "cafe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "add new category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Saldados\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/category",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category"
+							]
+						},
+						"description": "Los usuarios con el rol \"admin\" podrán crear las categorías que deseen."
+					},
+					"response": []
+				},
+				{
+					"name": "edit category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pipas\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/category/608efd243d665d73b69884f0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"608efd243d665d73b69884f0"
+							]
+						},
+						"description": "Cualquier usuario con el rol de \"admin\" podrá modificar el nombre de una categoría."
+					},
+					"response": []
+				},
+				{
+					"name": "category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/category/60914180ef1f63faa8344565",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"60914180ef1f63faa8344565"
+							]
+						},
+						"description": "Muestra los datos de la categoría, el nombre y el id del usuario."
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/category/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								""
+							]
+						},
+						"description": "Muestra los datos de todas las categorías creadas por administradores."
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/category/608efd243d665d73b69884f0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"category",
+								"608efd243d665d73b69884f0"
+							]
+						},
+						"description": "Cualquier usuario con el rol \"admin\" podrá eliminar la categoría que considere."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "add a product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxM2ZlNGVmMWY2M2ZhYTgzNDQ1NjMiLCJpYXQiOjE2MjAxMzE4MjEsImV4cCI6MTYyMDE0NjIyMX0.y_wir6pvt5crcrsWyLlbL3rCkA2K8kgme7oq_IGaeRI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"galletas de chocolate\",\n    \"category\": \"60914180ef1f63faa8344565\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Un usuario con el rol \"admin\" podrá subir un producto siempre y cuando la relacione con el id de una categoría."
+					},
+					"response": []
+				},
+				{
+					"name": "product by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/products/60914249ef1f63faa8344566",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"60914249ef1f63faa8344566"
+							]
+						},
+						"description": "Muestra los datos del producto, la categoría y el usuario."
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Galletas de chocolate\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/products/60914249ef1f63faa8344566",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"60914249ef1f63faa8344566"
+							]
+						},
+						"description": "Cualquier usuario \"admin\" puede modificar los productos."
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDg5M2FjNWEzMTE4NzIxMmNlYjM4YzAiLCJpYXQiOjE2MjAwMzQyNzgsImV4cCI6MTYyMDA0ODY3OH0.3r8UgndpY8xdFusz-sB5TGCtdT3WYbeIskFEN_sKJN8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/products/608fc394665f4b0a009a020b",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"608fc394665f4b0a009a020b"
+							]
+						},
+						"description": "Cualquier usuario con el rol \"admin\" puede eliminar un producto."
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seeker",
+			"item": [
+				{
+					"name": "seeker by kind and name or id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/seeker/users/edi",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"seeker",
+								"users",
+								"edi"
+							]
+						},
+						"description": "Ruta: host/seeker/:kind/:object\n\nEl kind puede ser: products, category y users.\nEl object puede ser: nombre, email, id."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "uploads",
+			"item": [
+				{
+					"name": "upload img",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "archivo",
+									"type": "file",
+									"src": "/home/jey/Imágenes/inicio.epgz"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/uploads",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"uploads"
+							]
+						},
+						"description": "Ruta para subir archivos y verificando el tipo de archivo."
+					},
+					"response": []
+				},
+				{
+					"name": "show img",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/uploads/users/608830bde851e02ab9681331",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"uploads",
+								"users",
+								"608830bde851e02ab9681331"
+							]
+						},
+						"description": "Ruta: host/api/uploads/:colection/:id\nMuestra la imagen de un usuario o producto siempre y cuando el id sea válido y la ruta exista."
+					},
+					"response": []
+				},
+				{
+					"name": "update img",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "archivo",
+									"type": "file",
+									"src": "/home/jey/Imágenes/art.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/uploads/users/60882ee95274f82771a82f0e",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"uploads",
+								"users",
+								"60882ee95274f82771a82f0e"
+							]
+						},
+						"description": "Ruta: host/api/uploads/:colection/:id\n\nEl colection puede ser: \"users\" o \"products\".\nEl id debe ser un id de mongo.\n\nSi no existe la carpeta se crea y se almacena.\nSi el usuario o producto ya tenía una foto previa, se elimina y se sube la nueva."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"número 22\",\n    \"email\": \"test22@gmail.com\",\n    \"password\": \"123456\",\n    \"rol\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "El usuario debe rellenar el formulario siendo todos los campos obligatorios.\nEl email es único y la contraseña debe ser superior o igual a 6 caracteres.\nEl rol se divide entre \"user\" (usuario) y \"admin\" (administrador)."
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test21@gmail.com\",\n    \"password\": \"12345689\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "El usuario puede iniciar sesión directamente o a través de google.\nSi es directamente se le pedirá el email y la contraseña.\nSi es mediante google, pulsando el botón y seleccionando el email."
+					},
+					"response": []
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"David\",\n    \"password\": \"12345689\",\n    \"rol\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Para la editar los datos el usuario podrá realizarlo mediante esta ruta, siendo su token validado y con el id de la base de mongo."
+					},
+					"response": []
+				},
+				{
+					"name": "get usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Se adquiere los datos de todos los usuarios registrados siempre y cuando su \"status\" sea verdadero."
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDkxNDA1OWVmMWY2M2ZhYTgzNDQ1NjQiLCJpYXQiOjE2MjAxMzQzNzIsImV4cCI6MTYyMDE0ODc3Mn0.r1yKPaCZ5ZfEPRwbpt9gfY9UoduzyHzWfH79pe6BY60",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/6091435cef1f63faa8344567",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"6091435cef1f63faa8344567"
+							]
+						},
+						"description": "Cualquier usuario con el rol \"admin\" podrá borrar a otros usuarios.\nSe verifica su rol con el token y es necesario especificar el id del usuario al que se quiere eliminar."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
