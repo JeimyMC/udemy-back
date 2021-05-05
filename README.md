@@ -22,14 +22,11 @@ You will need node and mongoDB compass.
 
 ```
 git clone https://github.com/
-
 ```
 
-2. INstall NPM packages
-
+2. Install NPM packages
 ```
 npm install
-
 ```
 
 3. Create your .env with the variables of template.env
